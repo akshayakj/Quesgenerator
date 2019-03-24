@@ -4,13 +4,13 @@
     <div>
         <h1>Welcome to Smart Question Generator</h1>
     </div >
-        <form action="#" method="post" name="myform">
+        <form action="{% url 'quest:get' %}" method="post" name="myform">
             {% csrf_token %}
              <div class="form-group col-sm-3 col-md-6">
             <label for="Input text" style="font-size: 20px">Input Text</label>
             <textarea class="form-control" id="text" rows="5" style="margin-bottom: 10px" name="text"></textarea>
 
-            <button type="submit" class="btn btn-success" onsubmit="{% url 'quest:get' %}">WH Question</button>
+            <button type="submit" class="btn btn-success">WH Question</button>
              </div>
         </form>
 
