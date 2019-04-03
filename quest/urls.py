@@ -5,8 +5,15 @@ aap_name = 'quest'
 
 urlpatterns = [
 
-    path('', views.index, name='index'),
+    path('home/chapter/input/', views.index, name='index'),
 
-    path('output/', views.get, name='get'),
-    # path('', views.IndexView.as_view(), name='index'),
+    #/quest/output/
+    path('home/chapter/input/output/', views.get, name='get'),
+
+    path('home/',views.home, name='home'),
+
+    path('home/chapter/',views.fli,name='fli'),
+
+    #/quest/output/final
+    path('home/chapter/input/output/final/', views.final, name='final'),
 ]

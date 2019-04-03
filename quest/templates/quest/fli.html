@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Source code</title>
+    {% load staticfiles %}
+<link rel="stylesheet" href="{%  static 'quest/bk.css' %}">
+</head>
+<body>
+<div>
+<button id="b" onclick=(location.href="{% url 'quest:index' %}")> INPUT TEXT</button>
+</div>
+<div class="card">
+	<div class="imgBox">
+		<img src="{% static 'quest/im/1.png' %}" width="200px" height="300px">
+	</div>
+	<div class="details">
+		<iframe id="p1" src="{% static 'quest/text/1.pdf' %}" width="195px" height="295px"></iframe>
+				<button onclick="o1();" class="btn">FULL TEXT</button>
+	</div>
+</div>
+
+<div class="card">
+	<div class="imgBox">
+		<img src="{% static 'quest/im/2.png' %}" width="200px" height="300px">
+	</div>
+	<div class="details">
+		<iframe id="p2" src="{% static 'quest/text/2.pdf' %}" width="195px" height="295px"></iframe>
+				<button onclick="o2();" class="btn">FULL TEXT</button>
+	</div>
+</div>
+
+
+<div class="card">
+	<div class="imgBox">
+		<img src="{% static 'quest/im/3.png' %}" width="200px" height="300px">
+	</div>
+	<div class="details">
+		<iframe id="p3" src="{% static 'quest/text/3.pdf' %}" width="195px" height="295px"></iframe>
+				<button onclick="o3();" class="btn">FULL TEXT</button>
+	</div>
+</div>
+
+
+<div class="card">
+	<div class="imgBox">
+		<img src="{% static 'quest/im/4.png' %}" width="200px" height="300px">
+	</div>
+	<div class="details">
+		<iframe id="p4" src="{% static 'quest/text/4.pdf' %}" width="195px" height="295px"></iframe>
+				<button onclick="o4();" class="btn">FULL TEXT</button>
+	</div>
+</div>
+
+
+<div class="card">
+	<div class="imgBox">
+		<img src="{% static 'quest/im/5.png' %}" width="200px" height="300px">
+	</div>
+	<div class="details">
+		<iframe id="p5" src="{% static 'quest/text/5.pdf' %}" width="195px" height="295px"></iframe>
+				<button onclick="o5();" class="btn">FULL TEXT</button>
+	</div>
+</div>
+
+
+<div class="card">
+	<div class="imgBox">
+		<img src="{% static 'quest/im/6.png' %}" width="200px" height="300px">
+	</div>
+	<div class="details">
+		<iframe id="p6" src="{% static 'quest/text/6.pdf' %}" width="195px" height="295px"></iframe>
+				<button onclick="o6();" class="btn">FULL TEXT</button>
+	</div>
+</div>
+
+
+<div class="card">
+	<div class="imgBox">
+		<img src="{% static 'quest/im/7.png' %}" width="200px" height="300px">
+	</div>
+	<div class="details">
+		<iframe id="p7" src="{% static 'quest/text/7.pdf' %}" width="195px" height="295px"></iframe>
+				<button onclick="o7();" class="btn">FULL TEXT</button>
+	</div>
+</div>
+
+
+<div class="card">
+	<div class="imgBox">
+		<img src="{% static 'quest/im/8.png' %}" width="200px" height="300px">
+	</div>
+	<div class="details">
+		<iframe id="p8" src="{% static 'quest/text/8.pdf' %}" width="195px" height="295px"></iframe>
+				<button onclick="o8();" class="btn">FULL TEXT</button>
+	</div>
+</div>
+
+
+<div class="card">
+	<div class="imgBox">
+		<img src="{% static 'quest/im/9.png' %}" width="200px" height="300px">
+	</div>
+	<div class="details">
+		<iframe id="p9" src="{% static 'quest/text/9.pdf' %}" width="195px" height="295px"></iframe>
+				<button onclick="o9();" class="btn">FULL TEXT</button>
+	</div>
+</div>
+
+
+<div class="card">
+	<div class="imgBox">
+		<img src="{% static 'quest/im/10.png' %}" width="200px" height="300px">
+	</div>
+	<div class="details">
+		<iframe id="p10" src="{% static 'quest/text/10.pdf' %}" width="195px" height="295px"></iframe>
+				<button onclick="o10();" class="btn">FULL TEXT</button>
+	</div>
+</div>
+
+
+<div class="card">
+	<div class="imgBox">
+		<img src="{% static 'quest/im/11.png' %}" width="200px" height="300px">
+	</div>
+	<div class="details">
+		<iframe id="p11" src="{% static 'quest/text/11.pdf' %}" width="195px" height="295px"></iframe>
+				<button onclick="o11();" class="btn">FULL TEXT</button>
+	</div>
+</div>
+<button id="b1" onclick=(location.href="{% url 'quest:home' %}")> BACK</button>
+<script>
+
+function o1() {
+var elem = document.getElementById("p1");
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  }  else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+function o2() {
+var elem = document.getElementById("p2");
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  }  else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+function o3() {
+var elem = document.getElementById("p3");
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  }  else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+function o4() {
+var elem = document.getElementById("p4");
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  }  else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+function o5() {
+var elem = document.getElementById("p5");
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  }  else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+function o6() {
+var elem = document.getElementById("p6");
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  }  else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+function o7() {
+var elem = document.getElementById("p7");
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  }  else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+function o8() {
+var elem = document.getElementById("p8");
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  }  else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+function o9() {
+var elem = document.getElementById("p9");
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  }  else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+function o10() {
+var elem = document.getElementById("p10");
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  }  else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+function o11() {
+var elem = document.getElementById("p11");
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  }  else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+
+</script>
+
+
+</body>
+</html>

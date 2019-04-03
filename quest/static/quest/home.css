@@ -1,0 +1,244 @@
+.wrap {
+  margin-top: 150px;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+}
+.cube {
+  margin: auto;
+  position: relative;
+  height: 200px;
+  width: 200px;
+  transform-style: preserve-3d;
+}
+.cube > div {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  opacity: 0.9;
+  background-color:black;
+  border: solid 1px #eeeeee;
+  color: #ffffff;
+}
+.front {
+  transform: translateZ(100px);
+}
+
+.back {
+  transform: translateZ(-100px) rotateY(180deg);
+}
+
+.right {
+  transform: rotateY(-270deg) translateX(100px);
+  transform-origin: top right;
+}
+
+.left {
+  transform: rotateY(270deg) translateX(-100px);
+  transform-origin: center left;
+}
+
+.top {
+  transform: rotateX(-270deg) translateY(-100px);
+  transform-origin: top center;
+}
+
+.bottom {
+  transform: rotateX(270deg) translateY(100px);
+  transform-origin: bottom center;
+}
+@keyframes rotate {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+.cube {
+  animation: rotate 20s infinite linear;
+}
+.wrap:hover .front {
+  transform: translateZ(200px);
+}
+
+.wrap:hover .back {
+  transform: translateZ(-200px) rotateY(180deg);
+}
+
+.wrap:hover .right {
+  transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+}
+
+.wrap:hover .left {
+  transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+}
+
+.wrap:hover .top {
+  transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+}
+
+.wrap:hover .bottom {
+  transform: rotateX(270deg) translateZ(100px) translateY(100px);
+}
+.cube > div {
+  transition: transform 0.2s ease-in;
+}
+.front >img{
+  width:100%;
+}
+.back >img{
+  width:100%;
+}
+.top >img{
+  width:100%;
+}
+.bottom >img{
+  width:100%;
+}
+.left >img{
+  width:100%;
+}
+.right >img{
+  width:100%;
+}
+
+
+.block-menu {
+  display: block;
+  background:none;
+}
+
+.block-menu li {
+  display: inline-block;
+}
+
+.block-menu li a {
+  color: white;
+  display: block;
+  text-decoration: none;
+  font-family: 'Passion One', Arial, sans-serif;
+  font-smoothing: antialiased;
+  text-transform: uppercase;
+  overflow: visible;
+  line-height: 20px;
+  font-size: 24px;
+  padding: 20px 15px;
+}
+
+/* animation domination */
+.three-d {
+  perspective: 200px;
+  transition: all .07s linear;
+  position: relative;
+  cursor: pointer;
+}
+  /* complete the animation! */
+  .three-d:hover .three-d-box, 
+  .three-d:focus .three-d-box {
+    transform: translateZ(-25px) rotateX(90deg);
+  }
+
+.three-d-box {
+  transition: all .3s ease-out;
+  transform: translatez(-25px);
+  transform-style: preserve-3d;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* 
+  put the "front" and "back" elements into place with CSS transforms, 
+  specifically translation and translatez
+*/
+.f {
+  transform: rotatex(0deg) translatez(25px);
+}
+
+.b {
+  transform: rotatex(-90deg) translatez(25px);
+  color: #ffe7c4;
+}
+
+.f, .b {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background:#7b38d8;
+  padding: 15px 10px;
+  color: white;
+  pointer-events: none;
+  box-sizing: border-box;
+   border-radius: 15px;
+   text-align: center;
+}
+.container {
+  position: absolute;
+  top:80%;
+  left:75%;
+  margin-left: -65px;
+  margin-top: -20px;
+  width: 250px;
+  height: 40px;
+  text-align: center;
+}
+.button {
+  display: inline-block;
+  background-color: #7b38d8;
+  border-radius: 20px;
+  border:none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 250px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#pro{
+  float:right;
+}
+#f1,#b1{
+   background:url(images/b.jpg);
+   color:black;
+   font-family:Impact;
+   font-size: 32px;
+}

@@ -1,8 +1,41 @@
 {% extends 'quest/base.html' %}
-{% block title %}Question{% endblock %}
+{% block title %}Output{% endblock %}
+<script>
+    function saveEdits() {
+
+//get the editable element
+var editElem = document.getElementById("edit");
+
+//get the edited element content
+var userVersion = editElem.innerHTML;
+
+//save the content to local storage
+localStorage.userEdits = userVersion;
+
+//write a confirmation to the user
+document.getElementById("update").innerHTML="Edits saved!";
+    }
+
+    function checkEdits() {
+
+//find out if the user has previously saved edits
+if(localStorage.userEdits!=null)
+document.getElementById("edit").innerHTML = localStorage.userEdits;
+}
+</script>
 {% block body%}
-    <div class="container-fluid">
+    <div onload="checkEdits()">
+    <input type="button" value="save my edits" onclick="saveEdits()"/>
+    <div class="container-fluid" id="edit" contenteditable="true">
     <h3>Questions:</h3>
-    <p style="font-size:20px"> {{ ques }}</p>
+        <form action="{% url 'quest:final' %}" method="post">
+        {% csrf_token %}
+{#        {% for que in sq %}#}
+{#            <pre style="font-size: 15px"><input type="checkbox" name="text" value="{{ que }}">&nbsp {{ que }}</pre>#}
+{#        {% endfor %}#}
+            <pre style="font-size: 15px">{{ sq }}</pre>
+        <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
     </div>
 {% endblock %}

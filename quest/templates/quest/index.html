@@ -1,17 +1,23 @@
 {% extends 'quest/base.html' %}
 
 {% block body %}
-    <div>
-        <h1>Welcome to Smart Question Generator</h1>
-    </div >
+{#    <div>#}
+{#        <h1>INPUT YOUR TEXT HERE AND GET QUESTIONS!</h1>#}
+{#    </div >#}
         <form action="{% url 'quest:get' %}" method="post" name="myform">
             {% csrf_token %}
-             <div class="form-group col-sm-3 col-md-6">
-            <label for="Input text" style="font-size: 20px">Input Text</label>
-            <textarea class="form-control" id="text" rows="5" style="margin-bottom: 10px" name="text"></textarea>
 
-            <button type="submit" class="btn btn-success">WH Question</button>
+             <div class="form-group col-sm-3 col-md-8">
+            <label for="Input text" style="font-size: 20px;font-weight:bold;">INPUT YOUR TEXT HERE AND GET QUESTIONS!</label>
+            <textarea class="form-control" id="text" rows="14" style="margin-bottom: 10px" name="text"></textarea>
+
+                <button type="submit" class="btn btn-success" name="wh">WH Question</button>
+                 <button type="submit" class="btn btn-primary" name="fib">Fill in the blanks Question</button>
+                 <button type="submit" class="btn btn-warning" name="mcq">MCQ question</button>
              </div>
+
         </form>
+
+
 
 {% endblock %}

@@ -1,25 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>{% block head %}
-    <meta charset="UTF-8">
-    <title>{% block title %}Smart QG{% endblock %}</title>
+<html>
+<head>
+  <title>3d</title>
     {% load staticfiles %}
-     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-     <link href="{% static 'quest/home.css' %}" rel='stylesheet' type='text/css'>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-{% endblock %}
+  <link href="{% static 'quest/home.css' %}" rel='stylesheet' type='text/css'>
 </head>
-
-<body background="{% static 'quest/im/b.jpg' %}">
-<div>
-    <
-</div>
+<body background="../../static/quest/images/b.jpg">
   <ul class="block-menu">
-  <li><a href={% url 'quest:home' %} class="three-d">
+  <li><a href="#" class="three-d">
     Home
     <span aria-hidden="true" class="three-d-box">
       <span class="f">Home</span>
@@ -50,7 +38,31 @@
 
   <!-- more items here -->
 </ul>
-{% block body %}
-{% endblock %}
+<div class="wrap">
+  <div class="cube">
+    <div class="front">
+      <img src="../../static/quest/images/i2.jpg">
+    </div>
+    <div class="back">
+      <img src="../../static/quest/images/i4.jpg">
+    </div>
+    <div class="top">
+      <img src="../../static/quest/images/i5.jpg">
+    </div>
+    <div class="bottom">
+      <img src="../../static/quest/images/i6.jpg">
+    </div>
+    <div class="left">
+      <img src="../../static/quest/images/i7.jpg">
+    </div>
+    <div class="right">
+      <img src="../../static/quest/images/i8.jpg">
+    </div>
+  </div>
+</div>
+<div class="container">
+  <button class="button" style="vertical-align:middle" onclick=(location.href="{% url 'quest:fli' %}")><span>Get Started &#8594;</span></button>
+</div>
 </body>
+
 </html>
